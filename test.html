@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-group--floating-label  " id="input-FirstName">
+        <div class="input-group">
+        <input placeholder=" " name="firstName" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="" tabindex="1" ng-init="join.firstName = ''" ng-model="join.firstName" type="text" id="FirstName">
+        <label for="FirstName" id="label-FirstName">
+        First Name
+        </label>
+        <div class="input-group-append">
+        <span class="valid-feedback ml-2">
+        <svg class="valid-feedback-check" xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 25 20">
+        <g fill="none" fill-rule="evenodd">
+        <g fill="#22AF01" fill-rule="nonzero">
+        <g>
+        <path d="M8.986 20c-.295 0-.583-.098-.817-.277L.525 12.375c-.557-.422-.69-1.2-.305-1.783.385-.581 1.157-.77 1.77-.43l.57.306 6.273 3.092L22.655.454c.32-.363.813-.525 1.288-.425.475.101.857.45.999.911.142.461.02.962-.317 1.31L9.973 19.57c-.254.274-.612.43-.987.43z" transform="translate(-332 -564) translate(332 564)"></path>
+        </g>
+        </g>
+        </g>
+        </svg>
+        </span>
+        </div>
+        <div class="invalid-feedback">
+        Please enter your first name
+        </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="form-group--floating-label  " id="input-EMail">
+        <div class="input-group">
+        <input placeholder=" " name="email" class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-maxlength" required="" tabindex="3" ng-init="join.email = ''" ng-model="join.email" maxlength="40" ng-maxlength="40" type="text" autocapitalize="off" valid-email="" inputmode="email" id="EMail">
+        <label for="EMail" id="label-EMail">
+        Email
+        </label>
+        <div class="input-group-append">
+        <span class="valid-feedback ml-2">
+        <svg class="valid-feedback-check" xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 25 20">
+        <g fill="none" fill-rule="evenodd">
+        <g fill="#22AF01" fill-rule="nonzero">
+        <g>
+        <path d="M8.986 20c-.295 0-.583-.098-.817-.277L.525 12.375c-.557-.422-.69-1.2-.305-1.783.385-.581 1.157-.77 1.77-.43l.57.306 6.273 3.092L22.655.454c.32-.363.813-.525 1.288-.425.475.101.857.45.999.911.142.461.02.962-.317 1.31L9.973 19.57c-.254.274-.612.43-.987.43z" transform="translate(-332 -564) translate(332 564)"></path>
+        </g>
+        </g>
+        </g>
+        </svg>
+        </span>
+        </div>
+        <div class="invalid-feedback">
+        <span ng-show="!!join.form.email.$error.emailExists" class="ng-hide">
+        This email address is already registered! Please try another
+        </span>
+        <span ng-show="join.form.email.$error.email" class="ng-hide">Please enter a valid email</span>
+        <span ng-show="join.form.email.$error.maxlength" class="ng-hide">Please enter a valid email</span>
+        <span ng-show="join.form.email.$error.required">Please enter your email</span>
+        </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="form-group--floating-label password join__form__password " id="input-PasswordJ">
+        <div class="input-group">
+        <input placeholder=" " name="password" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-invalid-password" ng-class="{'ng-focus': join.passwordFocus}" required="" tabindex="4" ng-model="join.password" ng-focus="join.passwordFocus = true" ng-blur="join.passwordFocus = false" type="password" validationrules="maxlength(64) and length(8) and upperCase(1) and lowerCase(1) and digits(1) and notRegexPattern([^\w!@#$%*=+.-])" password-pop-over="" autocomplete="off" id="PasswordJ">
+        <label for="PasswordJ" id="label-PasswordJ">
+        Password
+        </label>
+        <div class="input-group-append">
+        <a ng-click="join.toggleShowPassword()" ng-switch="join.passwordInputType">
+        <!-- ngSwitchDefault: text -->
+        <!-- ngSwitchWhen: password --><span ng-switch-when="password" class="ng-scope">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15">
+        <g fill="none" fill-rule="evenodd">
+        <g>
+        <g>
+        <path d="M0 0h18v18H0V0zm0 0h18v18H0V0zm0 0h18v18H0V0zm0 0h18v18H0V0z" transform="translate(-754 -380) translate(754 378)"></path>
+        <path fill="#9D9D9D" fill-rule="nonzero" d="M9 5.25c2.07 0 3.75 1.68 3.75 3.75 0 .488-.098.945-.27 1.373l2.19 2.19c1.133-.946 2.025-2.168 2.572-3.563-1.297-3.293-4.5-5.625-8.25-5.625-1.05 0-2.055.188-2.985.525l1.62 1.62c.428-.172.885-.27 1.373-.27zM1.5 3.203l1.71 1.71.345.345C2.31 6.224 1.335 7.514.75 9c1.297 3.293 4.5 5.625 8.25 5.625 1.162 0 2.273-.225 3.285-.63l.315.315 2.197 2.19.953-.953L2.453 2.25l-.953.953zM5.647 7.35L6.81 8.512c-.037.158-.06.323-.06.488 0 1.245 1.005 2.25 2.25 2.25.165 0 .33-.023.488-.06l1.162 1.162c-.502.248-1.058.398-1.65.398-2.07 0-3.75-1.68-3.75-3.75 0-.592.15-1.147.397-1.65zm3.233-.585l2.362 2.362.015-.12c0-1.244-1.005-2.25-2.25-2.25l-.127.008z" transform="translate(-754 -380) translate(754 378)"></path>
+        </g>
+        </g>
+        </g>
+        </svg>
+        </span><!-- end ngSwitchWhen: -->
+        </a>
+        <span class="valid-feedback ml-2">
+        <svg class="valid-feedback-check" xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 25 20">
+        <g fill="none" fill-rule="evenodd">
+        <g fill="#22AF01" fill-rule="nonzero">
+        <g>
+        <path d="M8.986 20c-.295 0-.583-.098-.817-.277L.525 12.375c-.557-.422-.69-1.2-.305-1.783.385-.581 1.157-.77 1.77-.43l.57.306 6.273 3.092L22.655.454c.32-.363.813-.525 1.288-.425.475.101.857.45.999.911.142.461.02.962-.317 1.31L9.973 19.57c-.254.274-.612.43-.987.43z" transform="translate(-332 -564) translate(332 564)"></path>
+        </g>
+        </g>
+        </g>
+        </svg>
+        </span>
+        </div>
+        <div class="password__footer" id="password_error">
+        <div class="password__footer__error">
+        Please enter a valid password
+        </div>
+        <div class="password__footer__help" id="password_error-hint" style="color: transparent;">_</div>
+        </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        <input type="hidden" name="password-confirm" ng-value="join.password" autocomplete="off">
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        <div class="form-group--phone  invalid pristine" ng-class="{'invalid': join.form.intphone.$invalid, 'touched': join.form.intphone.$touched, 'pristine': join.form.intphone.$pristine}">
+        <label for="HomePhone">
+        Phone Number
+        </label>
+        <div class="form-group--phone__error-msg">
+        Please enter a valid phone number
+        </dv>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="form-group--floating-label date-of-birth " id="input-BirthDate">
+        <div class="input-group">
+        <input placeholder=" " name="birthdate" class="form-control join__form__input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-invalid-date-of-birth ng-invalid-underage" age="18" date-of-birth="" required="" tabindex="8" ng-init="join.birthdate = ''" ng-model="join.birthdate" type="text" id="BirthDate">
+        <label for="BirthDate" class="date-of-birth__label">
+        Date of Birth
+        </label>
+        <p id="placeholder-BirthDate" class="join__form__input__placeholder">MM/DD/YYYY</p>
+        <div class="input-group-append">
+        <span class="valid-feedback ml-2">
+        <svg class="valid-feedback-check" xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 25 20">
+        <g fill="none" fill-rule="evenodd">
+        <g fill="#22AF01" fill-rule="nonzero">
+        <g>
+        <path d="M8.986 20c-.295 0-.583-.098-.817-.277L.525 12.375c-.557-.422-.69-1.2-.305-1.783.385-.581 1.157-.77 1.77-.43l.57.306 6.273 3.092L22.655.454c.32-.363.813-.525 1.288-.425.475.101.857.45.999.911.142.461.02.962-.317 1.31L9.973 19.57c-.254.274-.612.43-.987.43z" transform="translate(-332 -564) translate(332 564)"></path>
+        </g>
+        </g>
+        </g>
+        </svg>
+        </span>
+        </div>
+        <div class="invalid-feedback">
+        <span ng-switch="!!join.form.birthdate.$error.dateOfBirth">
+        <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">Please enter your date of birth</span><!-- end ngSwitchWhen: -->
+        <!-- ngSwitchWhen: false -->
+        </span>
+        </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        <button tabindex="10" ng-disabled="join.form.$invalid || join.form.$pending" class="join__form__submit-btn" name="login" id="btnsubmit" type="submit" disabled="disabled">
+        Create Account
+        </button>
+</body>
+</html>
